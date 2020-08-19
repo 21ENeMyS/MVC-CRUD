@@ -34,12 +34,5 @@ class Login extends Controller{
       }
 
     }
-
-    public function wdad()
-    {
-      return $this -> wdad();
-    }
-}
-
-
+  }
 ?>
