@@ -1,6 +1,6 @@
 <?php 
 
-define('URL', 'http://localhost/portfolio/public');
+define('URL', 'http://localhost/phpmvc/public');
 
 //! Database
 define('DB_HOST', 'localhost');

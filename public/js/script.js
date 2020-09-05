@@ -11,12 +11,12 @@ $(function () {
 	$('.TampilModalUbah').on('click',function () {
 		$('#JudulModal').html('Ubah Data Mahasiswa');
 		$('.modal-footer button[type = submit ]').html('Ubah Data Mahasiswa');
-		$('.modal-body form').attr('action','http://localhost/portfolio/public/mahasiswa/edit');
+		$('.modal-body form').attr('action','http://localhost/phpmvc/public/mahasiswa/edit');
 	
 	const id = $(this).data('id');
 
 		$.ajax({
-			url: 'http://localhost/portfolio/public/mahasiswa/getedit',
+			url: 'http://localhost/phpmvc/public/mahasiswa/getedit',
 			data: {id : id},
 			method: 'post',
 			dataType: 'json',

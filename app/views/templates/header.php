@@ -18,7 +18,11 @@
           <a href="<?= URL; ?>" class="nav-item nav-link active">Home</a>
 					<a href="<?= URL; ?>/about" class="nav-item nav-link ">About</a>
 					<a href="<?= URL; ?>/mahasiswa" class="nav-item nav-link ">Mahasiswa</a>
-					<a href="<?= URL; ?>/login" class="nav-item nav-link btn btn-outline-primary">Login</a>
+					<?php if (isset($_SESSION['id'])) : ?>
+					<a href="<?= URL; ?>/logout" class="nav-item nav-link btn btn-outline-primary">Log Out</a>
+					<?php else : ?>
+						<a href="<?= URL; ?>/login" class="nav-item nav-link btn btn-outline-primary">Login</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>

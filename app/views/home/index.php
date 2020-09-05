@@ -5,7 +5,7 @@
           Get work done <span> faster </span> <br />
           and <span>better</span> with us
         </h1>
-        <a href="<?= URL; ?>/mahasiswa" class="btn btn-dark tombol">Data Mahasiwa</a>
+        <a href="<?= URL; ?>/mahasiswa" class="btn btn-outline-dark tombol">Data Mahasiwa</a>
     </div>
 
     

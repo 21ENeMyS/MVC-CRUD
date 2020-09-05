@@ -25,7 +25,14 @@ class Mahasiswa_model{
 
   public function TambahDataBaru($data)
   {
-    $query = 'INSERT INTO '. $this -> table . ' VALUES (" ",:nama,:nim,:email,:jurusan)';
+
+    $nama = htmlspecialchars($data['nama']);
+    $nim = htmlspecialchars($data['nim']);
+    $email = htmlspecialchars($data['email']);
+    $jurusan = htmlspecialchars($data['jurusan']);
+
+    $query = "INSERT INTO ". $this -> table . " VALUES ('','$nama','$nim','$email','$jurusan')";
+
     $this -> db -> query($query);
     $this -> db -> bind('nama', $data ['nama']);
     $this -> db -> bind('nim', $data ['nim']);
@@ -48,11 +55,17 @@ class Mahasiswa_model{
 
   public function EditDataMahasiswa($data)
   {
-    $query = 'UPDATE ' . $this -> table .' SET nama = :nama,
-                                                nim = :nim,
-                                                email = :email,
-                                                jurusan = :jurusan
-                                              WHERE id = :id'; 
+    $id = $data['id'];
+    $nama = htmlspecialchars($data['nama']);
+    $nim = htmlspecialchars($data['nim']);
+    $email = htmlspecialchars($data['email']);
+    $jurusan = htmlspecialchars($data['jurusan']);
+    
+    $query = "UPDATE " . $this -> table ." SET nama = '$nama',
+                                                nim = '$nim',
+                                                email = '$email',
+                                                jurusan = '$jurusan'
+                                              WHERE id = '$id'"; 
       $this -> db -> query($query);
       $this -> db -> bind('nama', $data['nama']);
       $this -> db -> bind('nim', $data['nim']);
